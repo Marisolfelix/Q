@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+  <title>Aclaraciones</title>
+
+</head>
+
+<body>
+
+  <!-- BARRA DE NAVEGACION -->
+  <nav class="navbar navbar-expand-lg navbar-light  bg-info ">
+
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="index.html">Quejas</a>
+
+      <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="usuarios.html">Usuarios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" id="logout">Cerrar Sesion</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <!-- CONTENEDOR DE LA INFORMACION DEL CLIENTE-->
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col">
+        <!-- DATOS PERSONALES DLE CLIENTE -->
+        <table class="table table-borderless">
+          <thead>
+            <th scope="col">Numero De Cliente</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Correo</th>
+          </thead>
+          <tbody id="cliente_info">
+
+          </tbody>
+        </table>
+        <table class="table table-borderless ">
+          <thead>
+            <th>Domicilio</th>
+          </thead>
+          <tbody id="cliente_info_domicilio">
+
+          </tbody>
+        </table>
+        <label id="lb_observacion" for="observaciones">Observaciones:</label>
+        <textarea name="observaciones" id="observacion" cols="100" rows="10" class="form-control"></textarea>
+        <!-- DATOS DE CREDITO DEL CLIENTE -->
+        <div class="mt-5">
+          <div>
+            <button type="button" class="btn btn-primary" id="detalles">DETALLES</button>
+            <button type="button" class="btn btn-primary" id="enviar_aclaracion">ENVIAR ACLARACION</button>
+            <button type="button" class="btn btn-primary d-none" id="btnFacturas">VER FACTURAS</button>
+          </div>
+
+          <!-- tabla de todas las facturas -->
+          <div class="card mt-3" id="card_facturas">
+            <div class="card-body">
+              <h5 class="card-title" id="card_title_facturas">Facturas</h5>
+              <table class="table table-borderless table-secondary table-striped">
+                <thead>
+                  <th scope="col">N. FACTURA</th>
+                  <th scope="col">DESCRIPCION</th>
+                  <th scope="col">TIENDA</th>
+                  <th scope="col">FECHA</th>
+                  <th scope="col">CARGO</th>
+                  <th scope="col">ABONO</th>
+                </thead>
+                <tbody id="tbody_facturas">
+
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+
+          <!-- tabla de detalle facturas -->
+          <div class="card mt-3 d-none" id="card_detalle_facturas">
+            <div class="card-body">
+              <h5 class="card-title" id="card_title_detalle">Detalles De Factura</h5>
+              <table class="table table-borderless table-success table-striped">
+                <thead>
+                  <th scope="col">N. FACTURA</th>
+                  <th scope="col">DESCRIPCION</th>
+                  <th scope="col">TIENDA</th>
+                  <th scope="col">FECHA</th>
+                  <th scope="col">TIPO DE MOVIMIENTO</th>
+                  <th scope="col">CARGO</th>
+                  <th scope="col">ABONO</th>
+                  <th scope="col">SALDO</th>
+                </thead>
+                <tbody id="tbody_detalle_facturas">
+
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="js/registro-de-quejas.js?v8"></script>
+  <script src="js/auth.js?v2"></script>
+
+  <!-- bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
